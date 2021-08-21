@@ -93,12 +93,12 @@ def go(username, password):
               swal_msg += '</p><span>序號非即時發送，請稍待片刻便可前往 <a target="_blank" href="https://www.gnjoy.com.tw/Coupon/My">序號兌換中心</a> 進行兌換</span>';
           }
           window.swal({ text: swal_msg });
-          document.title = "kms_script_ajax_done succeeded - " + swal_msg;
+          document.title = "kms_script_ajax_done_succeeded - " + swal_msg;
         },
         error: function (response) {
           console.log(response);
           window.swal({ text: '目前讀取不到資訊，請玩家稍待片刻再操作，謝謝' });
-          document.title = "kms_script_ajax_done failed"
+          document.title = "kms_script_ajax_done_failed"
         }
       });
     });
@@ -121,7 +121,7 @@ def go(username, password):
   logger.info("Document loaded, sending ajax")
   WebDriverWait(driver, 180).until(expected_conditions.title_contains("kms_script_ajax_done"))
   page_title = driver.title
-  if "succeeded" in page_title:
+  if "kms_script_ajax_done_succeeded" in page_title:
     logger.info("ajax resposne: " + page_title)
     logger.info("ajax succeeded, going to close browser in 5 seconds")
     time.sleep(5)
