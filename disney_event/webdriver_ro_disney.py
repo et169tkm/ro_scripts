@@ -60,7 +60,9 @@ def go(username, password):
   
   logger.info("Entering username/password")
   driver.find_element_by_id("email").send_keys(username)
+  time.sleep(1)
   driver.find_element_by_id("pass").send_keys(password)
+  time.sleep(1)
   driver.find_element_by_id("pass").submit()
   
   ### Back to RO page, run KMS script
