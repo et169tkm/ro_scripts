@@ -37,7 +37,6 @@ def go(username, password):
   
   logger.info("Opening browser")
   driver = webdriver.Firefox(firefox_profile=firefox_profile)
-  driver.delete_all_cookies()
   
   ### Open RO page
   logger.info("Opening RO Disney event page (takes a while, be patient)")
