@@ -27,7 +27,10 @@ def main(args):
   logger.info(args)
 
   username = args.username
-  password = getpass.getpass("Facebook password:")
+  if args.stdin_password:
+    password = sys.stdin.readline().rstrip()
+  else:
+    password = getpass.getpass("Facebook password:")
   go(username, password)
 
 def go(username, password):
@@ -138,7 +141,7 @@ if __name__ == "__main__":
   parser.add_argument("username", help="Required facebook username (email)", action="store")
 
   # Optional argument flag which defaults to False
-  #parser.add_argument("-f", "--flag", action="store_true", default=False)
+  parser.add_argument("-p", "--stdin_password", action="store_true", default=False, help="Read password from stdin instead of prompting for input")
 
   # Optional argument which requires a parameter (eg. -d test)
   #parser.add_argument("-n", "--name", action="store", dest="name")
