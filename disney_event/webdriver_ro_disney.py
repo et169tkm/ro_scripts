@@ -51,15 +51,15 @@ def go(username, password):
   logger.info("Clicking FB button")
   driver.execute_script('TPLogin("FB")')
   
+  logger.info("Accepting cookies")
+  for i in range(60):
+    accept_button_list = driver.find_elements_by_css_selector('button[title="Accept All"]')
+    if len(accept_button_list) > 0:
+      ActionChains(driver).click(accept_button_list[0]).perform()
+
   ### On the facebook page, enter username and password
   WebDriverWait(driver, 180).until(expected_conditions.element_to_be_clickable((By.ID, 'email')))
 
-  logger.info("email text field detected, sleep 2s")
-  time.sleep(2)
-  logger.info("Accepting cookies")
-  ActionChains(driver).click(driver.find_elements_by_css_selector('button[title="Accept All"]')[0]).perform()
-  time.sleep(1)
-  
   logger.info("Entering username/password")
   driver.find_element_by_id("email").send_keys(username)
   time.sleep(1)
