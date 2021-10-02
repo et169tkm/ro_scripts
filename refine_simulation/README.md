@@ -3,12 +3,14 @@ and check the cost used (how many pieces of the item are used as material)
 
 ## The simulation process:
 
-1. assume we have an item of a given level (e.g. +10)
+In this example, simulate (+10 => +11) 100k times
+
+1. assume we have an item of a given level (+10)
 2. assume we have infinite material
 3. keep refining (if the item is broken, repair and continue)
 4. stop when the target level (e.g. +11) is reached
 5. check the cost (count how many pieces of material are used)
-6. repeat 1-5 multiple times, and get a distribution of the cost
+6. repeat 1-5 100k times, and get a distribution of the cost
 
 ## The following are the result of simulating 100000 times of each (+x => +y) refinement
 
