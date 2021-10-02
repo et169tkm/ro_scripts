@@ -14,7 +14,9 @@ In this example, simulate (+10 => +11) 100k times
 
 ## The following are the result of simulating 100000 times of each (+x => +y) refinement
 
-### 普通精鍊 (note that the average cost of 普通精鍊 of +4 => +7 is cheaper than 安全精鍊)
+### 普通精鍊
+
+Note that for +4 => +7, 普通精鍊 is cheaper then 安全精鍊 on average.
 
 ```
 Simulation (100000 rounds for each target level):
@@ -31,7 +33,9 @@ Simulating +13 => +14: cost(mean, 75/90/95%-tile):  67.996,  72.00/238.00/363.00
 Simulating +14 => +15: cost(mean, 75/90/95%-tile): 103.110, 107.00/362.00/556.00. mean refine length: 374.293 (slmulation elapsed time: 1614.96s)
 ```
 
-### +7 => +10 時使用安全精鍊 (+4 => +7 用普通精鍊比較便宜)
+### 安全精鍊
+
++7 => +10 時使用安全精鍊 (+4 => +7 用普通精鍊比較便宜)
 
 ```
 Simulation (100000 rounds for each target level):
