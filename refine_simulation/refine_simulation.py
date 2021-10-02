@@ -109,7 +109,7 @@ def run_simulation(times):
     dt = t1-t0
     costs = np.array([item.total_cost for item in items])
     refine_lengths = np.array([len(item.refine_history)-1 for item in items])
-    print("Simulating +%d%s => +%d%s: cost(mean, 75/90/95%%-tile): %s, %s/%s/%s. mean refine length: %s (slmulation elapsed time: %.02fs)" % (
+    print("+%d%s => +%d%s: cost(mean, 75/90/95%%-tile): %s, %s/%s/%s. mean refine length: %s (elapsed time: %.02fs)" % (
       source_level,
       " " if source_level < 10 else "",
       target_level,
