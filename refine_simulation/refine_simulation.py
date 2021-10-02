@@ -59,13 +59,13 @@ class Item:
       self._safe_refine()
     else:
       self._regular_refine()
-    self.refine_history.append(self.refine_level)
 
   # 安全精鍊一次
   def _safe_refine(self):
     source_level_profile = REFINE_PROFILE[self.refine_level]
     self.refine_level += 1
     self.total_cost += source_level_profile[3]
+    self.refine_history.append(self.refine_level)
     
   # 普通精鍊一次
   def _regular_refine(self):
@@ -76,11 +76,14 @@ class Item:
     source_level_profile = REFINE_PROFILE[self.refine_level]
     if r < source_level_profile[0]: # success
       self.refine_level += 1
+      self.refine_history.append(self.refine_level)
     elif r < source_level_profile[0] + source_level_profile[1]: # fail
       self.refine_level -= 1
+      self.refine_history.append(self.refine_level)
     else: # broken
       self.refine_level -= 1
       self.total_cost += 1 # cost of repairing it, assume that we always repair
+      self.refine_history.append(-self.refine_level)
     
   @staticmethod
   def _simulate_once(source_level, target_level):
