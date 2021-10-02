@@ -1,6 +1,6 @@
 The objective of this script is to find out the cost of refining a equipment from a given level to a target level by simulation.
 
-- The cost being the number of the equipment being used in repairing or safe refining. Other items like 神之金屬, 鋁 are ignored.
+- The cost only means the number of the equipments being used in repairing or safe refining. Other items like 神之金屬, 鋁 are ignored.
 - The script simulate the refinement process many times, and get a distribution of the cost.
 
 ## The simulation process:
