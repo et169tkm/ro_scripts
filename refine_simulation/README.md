@@ -13,6 +13,8 @@ and check the cost used (how many pieces of the item are used as material)
 # The following are the result of simulating 100000 times of each (+x => +y) refinement
 
 ## 普通精鍊 (note that the average cost of 普通精鍊 of +4 => +7 is cheaper than 安全精鍊)
+
+```
 Simulation (100000 rounds for each target level):
 Simulating +4  => +5 : cost(mean, 75/90/95%-tile):   0.499,   1.00/  2.00/  2.00. mean refine length:   2.997 (slmulation elapsed time: 0.49s)
 Simulating +5  => +6 : cost(mean, 75/90/95%-tile):   1.003,   1.00/  3.00/  5.00. mean refine length:   4.995 (slmulation elapsed time: 0.79s)
@@ -25,8 +27,11 @@ Simulating +11 => +12: cost(mean, 75/90/95%-tile):  29.076,  33.00/ 99.00/149.00
 Simulating +12 => +13: cost(mean, 75/90/95%-tile):  44.605,  50.00/155.00/233.00. mean refine length: 165.280 (slmulation elapsed time: 306.93s)
 Simulating +13 => +14: cost(mean, 75/90/95%-tile):  67.996,  72.00/238.00/363.00. mean refine length: 248.866 (slmulation elapsed time: 711.19s)
 Simulating +14 => +15: cost(mean, 75/90/95%-tile): 103.110, 107.00/362.00/556.00. mean refine length: 374.293 (slmulation elapsed time: 1614.96s)
+```
 
 ## +7 => +10 時使用安全精鍊 (+4 => +7 用普通精鍊比較便宜)
+
+```
 Simulation (100000 rounds for each target level):
 Simulating +4  => +5 : cost(mean, 75/90/95%-tile):   0.502,   1.00/  2.00/  2.00. mean refine length:   3.006 (slmulation elapsed time: 0.43s)
 Simulating +5  => +6 : cost(mean, 75/90/95%-tile):   0.990,   1.00/  3.00/  5.00. mean refine length:   4.966 (slmulation elapsed time: 0.83s)
@@ -39,4 +44,5 @@ Simulating +11 => +12: cost(mean, 75/90/95%-tile):  21.704,  30.00/ 67.00/ 94.00
 Simulating +12 => +13: cost(mean, 75/90/95%-tile):  34.314,  46.00/113.00/164.00. mean refine length:  15.327 (slmulation elapsed time: 2.82s)
 Simulating +13 => +14: cost(mean, 75/90/95%-tile):  53.014,  64.00/180.00/267.00. mean refine length:  25.493 (slmulation elapsed time: 6.87s)
 Simulating +14 => +15: cost(mean, 75/90/95%-tile):  80.202,  91.00/279.00/417.00. mean refine length:  40.389 (slmulation elapsed time: 16.24s)
+```
 
