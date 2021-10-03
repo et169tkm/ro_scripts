@@ -9,10 +9,11 @@ In this example, simulate (+10 => +11) 100k times
 
 1. assume we have an equipment of a given level (+10)
 2. assume we have infinite material
-3. keep refining (if the equipment is broken, repair and continue)
-4. stop when the target level (e.g. +11) is reached
-5. check the cost (count how many pieces of material are used)
-6. repeat 1-5 100k times, and get a distribution of the cost
+3. if the refinement level drops, keep refining
+4. if the equipment is broken, repair and keep refining
+5. stop only when the target level (e.g. +11) is reached
+6. check the cost (count how many equipment are used)
+7. repeat 1-5 100k times, and get a distribution of the cost
 
 ## The following are the result of simulating 100000 times of each (+x => +y) refinement
 
